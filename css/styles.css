@@ -1,0 +1,9 @@
+/* Aggregator stylesheet referenced by index.html
+   Imports the project's modular CSS files in correct order. */
+@import url('variables.css');
+@import url('style.css');
+@import url('header.css');
+@import url('main.css');
+@import url('footer.css');
+
+/* Any global overrides can be placed below if needed. */

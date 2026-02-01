@@ -1,9 +1,7 @@
-/* Шапка */
 .nav {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  position: sticky; /* Липкая шапка */
+  position: sticky;
   top: 0;
   width: 100%;
   background-color: var(--bg-white);
@@ -12,15 +10,15 @@
 }
 
 .nav-container {
-  display: flex; /* Шаг 5: Flexbox */
+  display: flex;
   align-items: center;
   justify-content: space-between;
   max-width: 1500px;
   width: 100%;
-  padding: 20px 24px;
+  position: relative;
+  padding: 12px 24px;
 }
 
-/* Логотип */
 .logo {
   font-family: var(--font-family-serif);
   font-size: 28px;
@@ -31,29 +29,29 @@
   padding: 0;
 }
 
-/* Десктопное меню (скрыто на мобильных) */
 .nav-desktop {
   display: none;
   align-items: center;
   gap: 24px;
-  background: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(15px);
-  padding: 8px 24px;
-  border-radius: 100px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 
 .nav-link {
   text-decoration: none;
   color: var(--text-main);
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
+  padding: 8px 10px;
+  display: inline-block;
   transition: color 0.2s;
 }
 .nav-link:hover {
   color: var(--primary);
 }
 
-/* Кнопки действий */
 .nav-actions {
   display: flex;
   align-items: center;
@@ -61,12 +59,15 @@
 }
 
 .nav-icon-btn {
-  padding: 8px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
   background: none;
   border: none;
   cursor: pointer;
   display: flex;
+  align-items: center;
+  justify-content: center;
   color: var(--text-main);
 }
 .nav-icon-btn:hover {
@@ -74,9 +75,10 @@
 }
 
 .nav-signin {
-  display: none; /* Скрыто на мобильных */
+  display: none;
   gap: 8px;
   align-items: center;
+  justify-content: center;
   padding: 12px 20px;
   border-radius: 1000px;
   background-color: var(--primary);
@@ -85,12 +87,17 @@
   font-size: 14px;
   border: none;
   cursor: pointer;
+  height: 44px;
 }
 .nav-signin:hover {
   background-color: var(--primary-hover);
 }
 
-/* Бургер меню (Шаг 4) */
+.nav-signin .icon-small {
+  width: 16px;
+  height: 16px;
+}
+
 .mobile-menu-btn {
   display: flex;
 }
@@ -104,10 +111,12 @@
   display: block;
 }
 
-/* Выпадающее меню */
 .mobile-menu {
   display: none;
   width: 100%;
+  position: absolute;
+  top: 100%;
+  left: 0;
   background-color: var(--bg-white);
   border-top: 1px solid var(--border);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
@@ -120,27 +129,6 @@
   gap: 16px;
 }
 
-.mobile-nav-link {
-  text-decoration: none;
-  color: var(--text-main);
-  font-weight: 700;
-  font-size: 14px;
-}
-.mobile-signin {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  justify-content: center;
-  padding: 12px 20px;
-  border-radius: 1000px;
-  background-color: var(--primary);
-  color: var(--bg-white);
-  font-weight: 700;
-  border: none;
-  margin-top: 8px;
-}
-
-/* === АДАПТИВНОСТЬ (Шаг 3: Планшеты и Десктопы) === */
 @media (min-width: 768px) {
   .nav-desktop {
     display: flex;
@@ -153,11 +141,5 @@
   }
   .mobile-menu {
     display: none !important;
-  }
-  .logo {
-    font-size: 32px;
-  }
-  .nav-container {
-    padding: 20px 32px;
   }
 }

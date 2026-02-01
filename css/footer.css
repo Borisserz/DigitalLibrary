@@ -36,8 +36,16 @@
 
 .footer-icon {
   height: 60px;
-  width: 27px;
+  width: 30px;
   color: var(--text-main);
+  display: flex;
+}
+
+.footer-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentColor;
+  fill: none;
 }
 
 .footer-text {
@@ -45,7 +53,7 @@
   flex-direction: column;
   gap: 16px;
   font-family: var(--font-family-mono);
-  color: var(--primary); /* Зеленый текст */
+  color: var(--primary);
   font-size: 12px;
 }
 .footer-text-row {
@@ -53,7 +61,6 @@
   gap: 16px;
 }
 
-/* Адаптив подвала */
 @media (min-width: 768px) {
   .footer {
     gap: 80px;

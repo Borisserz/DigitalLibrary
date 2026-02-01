@@ -1,4 +1,3 @@
-/* Базовые настройки */
 * {
   margin: 0;
   padding: 0;
@@ -13,23 +12,36 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  overflow-x: hidden;
 }
 
-/* Утилиты и иконки */
-.icon {
-  width: 20px;
-  height: 20px;
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
 }
+
+.icon {
+  width: 24px;
+  height: 24px;
+  stroke: currentColor;
+  fill: none;
+}
+
 .icon-small {
   width: 16px;
   height: 16px;
+  stroke: currentColor;
+  fill: none;
 }
+
 .icon-tiny {
   width: 14px;
   height: 14px;
+  stroke: currentColor;
+  fill: none;
 }
 
-/* Skip Link (Доступность) */
 .skip-link {
   position: absolute;
   top: -100px;
@@ -45,4 +57,11 @@ body {
 }
 .skip-link:focus {
   top: 0;
+}
+
+.nav-container,
+.hero,
+.books-section,
+.features {
+  margin: 0 auto;
 }
