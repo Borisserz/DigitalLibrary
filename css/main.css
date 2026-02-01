@@ -1,0 +1,280 @@
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* === Hero Section (Flexbox) === */
+.hero {
+  display: flex;
+  flex-direction: column; /* Мобильный: колонка */
+  align-items: start;
+  max-width: 1500px;
+  padding: 48px 24px 80px;
+  width: 100%;
+  gap: 64px;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 100%;
+}
+
+.hero-title {
+  font-family: var(--font-family-serif);
+  line-height: 0.9;
+  font-size: 56px;
+  color: var(--text-main);
+  text-align: center;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.search-input {
+  width: 100%;
+  padding: 20px 24px 20px 64px;
+  border-radius: 1000px;
+  border: 2px solid var(--border);
+  font-size: 16px;
+  outline: none;
+}
+.search-input:focus {
+  border-color: var(--primary);
+}
+
+.search-icon {
+  position: absolute;
+  left: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.search-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--primary);
+  color: var(--bg-white);
+  padding: 12px 24px;
+  border-radius: 1000px;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.hero-image {
+  background-color: #8e9c78; /* Оригинальный цвет подложки */
+  height: 400px;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* === Features Section (Grid) === */
+.features {
+  width: 100%;
+  max-width: 1500px;
+  padding: 48px 24px 80px;
+  border-top: 0.5px solid var(--border);
+}
+
+.features-title {
+  font-family: var(--font-family-serif);
+  font-size: 44px;
+  margin-bottom: 24px;
+}
+
+.features-grid {
+  display: grid; /* Шаг 7: CSS Grid */
+  grid-template-columns: 1fr; /* 1 колонка на мобильном */
+  gap: 20px;
+  padding-top: 32px;
+}
+
+.feature-card {
+  padding: 32px;
+  border-top: 1px solid var(--border);
+}
+
+/* === Books Section (Grid + Flex) === */
+.books-section {
+  width: 100%;
+  max-width: 1500px;
+  padding: 48px 24px 80px;
+  border-top: 0.5px solid var(--border);
+}
+
+.books-grid {
+  display: grid; /* Шаг 7: CSS Grid */
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+/* Карточка книги */
+.book-card {
+  background-color: var(--bg-card);
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.08);
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: transform 0.3s;
+  display: flex;
+  flex-direction: column;
+}
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card__image-wrapper {
+  position: relative;
+  aspect-ratio: 3/4;
+  background-color: #8e9c78;
+}
+.book-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.book-card__genre {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  padding: 4px 12px;
+  border-radius: 100px;
+  background-color: var(--secondary); /* Светло-зеленый */
+  color: var(--primary); /* Темно-зеленый */
+  font-family: var(--font-family-mono);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.book-card__info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.book-card__name {
+  font-family: var(--font-family-serif);
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.book-card__read-btn {
+  background-color: var(--primary);
+  color: var(--bg-white);
+  padding: 6px 12px;
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.book-card__read-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* CTA Section */
+.cta {
+  text-align: center;
+  padding: 80px 24px 128px;
+  border-top: 1px solid #929292;
+}
+.cta-button {
+  background-color: var(--secondary);
+  color: var(--text-main);
+  padding: 16px 32px;
+  border-radius: 1000px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+.cta-button:hover {
+  background-color: var(--secondary-hover);
+}
+
+/* Утилиты видимости для адаптива */
+.desktop-only {
+  display: none;
+}
+.mobile-only {
+  display: flex;
+  margin: 0 auto;
+}
+
+/* === МЕДИАЗАПРОСЫ (Шаг 3, 5, 7) === */
+
+/* Планшеты (от 768px) */
+@media (min-width: 768px) {
+  .hero {
+    flex-direction: row; /* Flex Row */
+    align-items: center;
+    padding: 80px 32px;
+  }
+  .hero-content {
+    align-items: flex-start;
+    text-align: left;
+  }
+  .hero-title {
+    text-align: left;
+    font-size: 80px;
+  }
+  .hero-image {
+    height: 533px;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .books-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .desktop-only {
+    display: flex;
+  }
+  .mobile-only {
+    display: none;
+  }
+}
+
+/* Десктопы (от 1024px) */
+@media (min-width: 1024px) {
+  .hero-title {
+    font-size: 112px;
+  }
+
+  /* Сложная сетка (Шаг 7) */
+  .features-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .books-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

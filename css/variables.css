@@ -1,0 +1,25 @@
+:root {
+  /* Оригинальная палитра (Зеленая тема) */
+  --primary: #485c11;
+  --primary-hover: #3d4d0e;
+  --secondary: #dfecc6;
+  --secondary-hover: #d0ddb7;
+
+  --text-main: #000000;
+  --text-muted: #6f6f6f;
+
+  --bg-white: #ffffff;
+  --bg-card: #ffffff;
+  --border: #e9e9e9;
+
+  /* Типографика */
+  --font-family-main: 'DM Sans', sans-serif;
+  --font-family-serif: 'Crimson Text', serif;
+  --font-family-mono: 'Roboto Mono', monospace;
+
+  /* Размеры шрифтов */
+  --font-size-sm: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-lg: 1.25rem; /* 20px */
+  --font-size-xl: 1.5rem; /* 24px */
+}

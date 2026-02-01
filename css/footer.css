@@ -1,0 +1,74 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 48px 24px 32px;
+  width: 100%;
+  border-top: 1px solid var(--border);
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 14px;
+}
+.footer-link:hover {
+  color: var(--primary);
+}
+
+.footer-credits {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.footer-icon {
+  height: 60px;
+  width: 27px;
+  color: var(--text-main);
+}
+
+.footer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-family: var(--font-family-mono);
+  color: var(--primary); /* Зеленый текст */
+  font-size: 12px;
+}
+.footer-text-row {
+  display: flex;
+  gap: 16px;
+}
+
+/* Адаптив подвала */
+@media (min-width: 768px) {
+  .footer {
+    gap: 80px;
+    padding: 48px 32px 32px;
+  }
+  .footer-links {
+    flex-direction: row;
+  }
+  .footer-credits {
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 40px;
+  }
+  .footer-text {
+    flex-direction: row;
+    gap: 24px;
+  }
+}

@@ -1,0 +1,163 @@
+/* Шапка */
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: sticky; /* Липкая шапка */
+  top: 0;
+  width: 100%;
+  background-color: var(--bg-white);
+  z-index: 50;
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-container {
+  display: flex; /* Шаг 5: Flexbox */
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1500px;
+  width: 100%;
+  padding: 20px 24px;
+}
+
+/* Логотип */
+.logo {
+  font-family: var(--font-family-serif);
+  font-size: 28px;
+  color: var(--text-main);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Десктопное меню (скрыто на мобильных) */
+.nav-desktop {
+  display: none;
+  align-items: center;
+  gap: 24px;
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(15px);
+  padding: 8px 24px;
+  border-radius: 100px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+.nav-link:hover {
+  color: var(--primary);
+}
+
+/* Кнопки действий */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-icon-btn {
+  padding: 8px;
+  border-radius: 50%;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  color: var(--text-main);
+}
+.nav-icon-btn:hover {
+  background-color: var(--secondary);
+}
+
+.nav-signin {
+  display: none; /* Скрыто на мобильных */
+  gap: 8px;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 1000px;
+  background-color: var(--primary);
+  color: var(--bg-white);
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}
+.nav-signin:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Бургер меню (Шаг 4) */
+.mobile-menu-btn {
+  display: flex;
+}
+.mobile-menu-btn .icon-menu-close {
+  display: none;
+}
+.mobile-menu-btn.is-open .icon-menu-burger {
+  display: none;
+}
+.mobile-menu-btn.is-open .icon-menu-close {
+  display: block;
+}
+
+/* Выпадающее меню */
+.mobile-menu {
+  display: none;
+  width: 100%;
+  background-color: var(--bg-white);
+  border-top: 1px solid var(--border);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-content {
+  display: flex;
+  flex-direction: column;
+  padding: 16px 24px;
+  gap: 16px;
+}
+
+.mobile-nav-link {
+  text-decoration: none;
+  color: var(--text-main);
+  font-weight: 700;
+  font-size: 14px;
+}
+.mobile-signin {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 20px;
+  border-radius: 1000px;
+  background-color: var(--primary);
+  color: var(--bg-white);
+  font-weight: 700;
+  border: none;
+  margin-top: 8px;
+}
+
+/* === АДАПТИВНОСТЬ (Шаг 3: Планшеты и Десктопы) === */
+@media (min-width: 768px) {
+  .nav-desktop {
+    display: flex;
+  }
+  .nav-signin {
+    display: flex;
+  }
+  .mobile-menu-btn {
+    display: none;
+  }
+  .mobile-menu {
+    display: none !important;
+  }
+  .logo {
+    font-size: 32px;
+  }
+  .nav-container {
+    padding: 20px 32px;
+  }
+}
