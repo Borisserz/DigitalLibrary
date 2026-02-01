@@ -13,6 +13,155 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- SVG Sprite System -->
+    <svg style="display: none">
+      <defs>
+        <symbol
+          id="icon-search"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <path d="m21 21-4.3-4.3"></path>
+        </symbol>
+        <symbol
+          id="icon-library"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
+          ></path>
+        </symbol>
+        <symbol
+          id="icon-user"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+          <circle cx="12" cy="7" r="4"></circle>
+        </symbol>
+        <symbol
+          id="icon-menu"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="4" x2="20" y1="6" y2="6"></line>
+          <line x1="4" x2="20" y1="12" y2="12"></line>
+          <line x1="4" x2="20" y1="18" y2="18"></line>
+        </symbol>
+        <symbol
+          id="icon-close"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <line x1="18" x2="6" y1="6" y2="18"></line>
+          <line x1="6" x2="18" y1="6" y2="18"></line>
+        </symbol>
+        <symbol
+          id="icon-trending"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
+          <polyline points="16 7 22 7 22 13"></polyline>
+        </symbol>
+        <symbol
+          id="icon-clock"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <circle cx="12" cy="12" r="10"></circle>
+          <polyline points="12 6 12 12 16 14"></polyline>
+        </symbol>
+        <symbol
+          id="icon-award"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+          <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+          <path d="M4 22h16"></path>
+          <path
+            d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
+          ></path>
+          <path
+            d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
+          ></path>
+          <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
+        </symbol>
+        <symbol
+          id="icon-heart"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
+          ></path>
+        </symbol>
+        <symbol
+          id="icon-star"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <polygon
+            points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+          ></polygon>
+        </symbol>
+        <symbol
+          id="icon-arrow-right"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path d="M5 12h14"></path>
+          <path d="m12 5 7 7-7 7"></path>
+        </symbol>
+      </defs>
+    </svg>
+
     <!-- Skip Link -->
     <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
@@ -42,47 +191,13 @@
         <!-- Action Buttons -->
         <div class="nav-actions">
           <button class="nav-icon-btn" aria-label="Search">
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <circle cx="11" cy="11" r="8"></circle>
-              <path d="m21 21-4.3-4.3"></path>
-            </svg>
+            <svg class="icon"><use href="#icon-search"></use></svg>
           </button>
           <button class="nav-icon-btn" aria-label="My Library">
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path
-                d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-              ></path>
-            </svg>
+            <svg class="icon"><use href="#icon-library"></use></svg>
           </button>
           <button class="nav-signin">
-            <svg
-              class="icon-small"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
+            <svg class="icon-small"><use href="#icon-user"></use></svg>
             Sign In
           </button>
 
@@ -92,19 +207,11 @@
             aria-label="Menu"
             onclick="toggleMobileMenu()"
           >
-            <svg
-              id="menu-icon"
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <line x1="4" x2="20" y1="6" y2="6"></line>
-              <line x1="4" x2="20" y1="12" y2="12"></line>
-              <line x1="4" x2="20" y1="18" y2="18"></line>
+            <svg class="icon icon-menu-burger">
+              <use href="#icon-menu"></use>
+            </svg>
+            <svg class="icon icon-menu-close">
+              <use href="#icon-close"></use>
             </svg>
           </button>
         </div>
@@ -129,18 +236,7 @@
           <a href="#faq" class="mobile-nav-link" itemprop="name">FAQ</a>
           <a href="#contact" class="mobile-nav-link" itemprop="name">Contact</a>
           <button class="mobile-signin">
-            <svg
-              class="icon-small"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
-              <circle cx="12" cy="7" r="4"></circle>
-            </svg>
+            <svg class="icon-small"><use href="#icon-user"></use></svg>
             Sign In
           </button>
         </div>
@@ -153,22 +249,9 @@
       <header class="hero">
         <div class="hero-content">
           <h1 class="hero-title">What you want to read today?</h1>
-
-          <!-- Search Bar -->
           <div class="search-container">
             <div class="search-wrapper">
-              <svg
-                class="search-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.3-4.3"></path>
-              </svg>
+              <svg class="search-icon"><use href="#icon-search"></use></svg>
               <input
                 type="text"
                 placeholder="Search by title, author, genre, or ISBN..."
@@ -181,18 +264,11 @@
             </p>
           </div>
         </div>
-
-        <!-- Hero Image -->
         <div class="hero-image">
           <img
             src="https://images.unsplash.com/photo-1756037020659-6f9d3418f6b6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBsaWJyYXJ5JTIwaW50ZXJpb3IlMjBib29rc3xlbnwxfHx8fDE3Njk4MzgyNzF8MA&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Modern library interior"
             class="hero-img"
-            onerror="
-              this.onerror = null;
-              this.src =
-                'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
-            "
           />
         </div>
       </header>
@@ -210,18 +286,7 @@
 
           <div class="features-grid">
             <div class="feature-card">
-              <svg
-                class="feature-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline>
-                <polyline points="16 7 22 7 22 13"></polyline>
-              </svg>
+              <svg class="feature-icon"><use href="#icon-trending"></use></svg>
               <div class="feature-text">
                 <h3 class="feature-title">Trending Titles</h3>
                 <p class="feature-description">
@@ -230,20 +295,8 @@
                 </p>
               </div>
             </div>
-
             <div class="feature-card">
-              <svg
-                class="feature-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
+              <svg class="feature-icon"><use href="#icon-clock"></use></svg>
               <div class="feature-text">
                 <h3 class="feature-title">Read Anytime</h3>
                 <p class="feature-description">
@@ -252,28 +305,8 @@
                 </p>
               </div>
             </div>
-
             <div class="feature-card">
-              <svg
-                class="feature-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
-                <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
-                <path d="M4 22h16"></path>
-                <path
-                  d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"
-                ></path>
-                <path
-                  d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"
-                ></path>
-                <path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"></path>
-              </svg>
+              <svg class="feature-icon"><use href="#icon-award"></use></svg>
               <div class="feature-text">
                 <h3 class="feature-title">Award Winners</h3>
                 <p class="feature-description">
@@ -282,20 +315,8 @@
                 </p>
               </div>
             </div>
-
             <div class="feature-card">
-              <svg
-                class="feature-icon"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <circle cx="11" cy="11" r="8"></circle>
-                <path d="m21 21-4.3-4.3"></path>
-              </svg>
+              <svg class="feature-icon"><use href="#icon-search"></use></svg>
               <div class="feature-text">
                 <h3 class="feature-title">Smart Search</h3>
                 <p class="feature-description">
@@ -318,18 +339,7 @@
             </div>
             <button class="books-view-all desktop-only">
               View All
-              <svg
-                class="icon-small"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
+              <svg class="icon-small"><use href="#icon-arrow-right"></use></svg>
             </button>
           </div>
 
@@ -344,31 +354,16 @@
               <div class="book-card__image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1759910546935-cfffa7aaf1fc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvbGQlMjBib29rJTIwY292ZXIlMjBjbGFzc2ljJTIwbm92ZWx8ZW58MXx8fHwxNzY5ODgwNzIxfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Обложка книги The Great Gatsby автора F. Scott Fitzgerald"
+                  alt="The Great Gatsby"
                   class="book-card__image"
                   itemprop="image"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
-                  "
                 />
                 <button
                   class="book-card__favorite"
-                  aria-label="Добавить The Great Gatsby в избранное"
+                  aria-label="Add to favorites"
                 >
-                  <svg
-                    class="book-card__heart-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
-                    ></path>
+                  <svg class="book-card__heart-icon">
+                    <use href="#icon-heart"></use>
                   </svg>
                 </button>
                 <div class="book-card__genre" itemprop="genre">Classic</div>
@@ -395,85 +390,24 @@
                     itemtype="https://schema.org/AggregateRating"
                   >
                     <meta itemprop="ratingValue" content="4.8" />
-                    <meta itemprop="bestRating" content="5" />
-                    <meta itemprop="worstRating" content="1" />
                     <meta itemprop="ratingCount" content="1250" />
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <meta itemprop="bestRating" content="5" />
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <span
-                      class="book-card__rating-value"
-                      role="img"
-                      aria-label="Рейтинг 4.8 из 5"
-                      >4.8</span
-                    >
+                    <span class="book-card__rating-value">4.8</span>
                   </div>
                   <div
                     itemprop="offers"
@@ -486,23 +420,9 @@
                       itemprop="availability"
                       content="https://schema.org/InStock"
                     />
-                    <button
-                      class="book-card__read-btn"
-                      aria-label="Читать книгу The Great Gatsby"
-                    >
-                      <svg
-                        class="icon-tiny"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-                        ></path>
+                    <button class="book-card__read-btn">
+                      <svg class="icon-tiny">
+                        <use href="#icon-library"></use>
                       </svg>
                       Read
                     </button>
@@ -521,31 +441,13 @@
               <div class="book-card__image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1769625666533-1dc085407f53?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYW50YXN5JTIwYm9vayUyMGNvdmVyJTIwYXJ0fGVufDF8fHx8MTc2OTg3MjI3MXww&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Обложка книги The Midnight Library автора Matt Haig"
+                  alt="The Midnight Library"
                   class="book-card__image"
                   itemprop="image"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
-                  "
                 />
-                <button
-                  class="book-card__favorite"
-                  aria-label="Добавить The Midnight Library в избранное"
-                >
-                  <svg
-                    class="book-card__heart-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
-                    ></path>
+                <button class="book-card__favorite">
+                  <svg class="book-card__heart-icon">
+                    <use href="#icon-heart"></use>
                   </svg>
                 </button>
                 <div class="book-card__genre" itemprop="genre">Fantasy</div>
@@ -572,85 +474,23 @@
                     itemtype="https://schema.org/AggregateRating"
                   >
                     <meta itemprop="ratingValue" content="4.6" />
-                    <meta itemprop="bestRating" content="5" />
-                    <meta itemprop="worstRating" content="1" />
                     <meta itemprop="ratingCount" content="980" />
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <span
-                      class="book-card__rating-value"
-                      role="img"
-                      aria-label="Рейтинг 4.6 из 5"
-                      >4.6</span
-                    >
+                    <span class="book-card__rating-value">4.6</span>
                   </div>
                   <div
                     itemprop="offers"
@@ -659,27 +499,9 @@
                   >
                     <meta itemprop="price" content="0" />
                     <meta itemprop="priceCurrency" content="USD" />
-                    <meta
-                      itemprop="availability"
-                      content="https://schema.org/InStock"
-                    />
-                    <button
-                      class="book-card__read-btn"
-                      aria-label="Читать книгу The Midnight Library"
-                    >
-                      <svg
-                        class="icon-tiny"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-                        ></path>
+                    <button class="book-card__read-btn">
+                      <svg class="icon-tiny">
+                        <use href="#icon-library"></use>
                       </svg>
                       Read
                     </button>
@@ -698,31 +520,13 @@
               <div class="book-card__image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1612570328404-fc96e7ba6d18?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzY2llbmNlJTIwZmljdGlvbiUyMGJvb2slMjBjb3ZlcnxlbnwxfHx8fDE3Njk3NzMxNTV8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Обложка книги Dune автора Frank Herbert"
+                  alt="Dune"
                   class="book-card__image"
                   itemprop="image"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
-                  "
                 />
-                <button
-                  class="book-card__favorite"
-                  aria-label="Добавить Dune в избранное"
-                >
-                  <svg
-                    class="book-card__heart-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
-                    ></path>
+                <button class="book-card__favorite">
+                  <svg class="book-card__heart-icon">
+                    <use href="#icon-heart"></use>
                   </svg>
                 </button>
                 <div class="book-card__genre" itemprop="genre">Sci-Fi</div>
@@ -747,80 +551,23 @@
                     itemtype="https://schema.org/AggregateRating"
                   >
                     <meta itemprop="ratingValue" content="4.9" />
-                    <meta itemprop="bestRating" content="5" />
-                    <meta itemprop="worstRating" content="1" />
                     <meta itemprop="ratingCount" content="2100" />
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <span
-                      class="book-card__rating-value"
-                      role="img"
-                      aria-label="Рейтинг 4.9 из 5"
-                      >4.9</span
-                    >
+                    <span class="book-card__rating-value">4.9</span>
                   </div>
                   <div
                     itemprop="offers"
@@ -829,27 +576,9 @@
                   >
                     <meta itemprop="price" content="0" />
                     <meta itemprop="priceCurrency" content="USD" />
-                    <meta
-                      itemprop="availability"
-                      content="https://schema.org/InStock"
-                    />
-                    <button
-                      class="book-card__read-btn"
-                      aria-label="Читать книгу Dune"
-                    >
-                      <svg
-                        class="icon-tiny"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        aria-hidden="true"
-                      >
-                        <path
-                          d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-                        ></path>
+                    <button class="book-card__read-btn">
+                      <svg class="icon-tiny">
+                        <use href="#icon-library"></use>
                       </svg>
                       Read
                     </button>
@@ -868,31 +597,13 @@
               <div class="book-card__image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1760696473709-a7da66ee87a6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxteXN0ZXJ5JTIwdGhyaWxsZXIlMjBib29rJTIwY292ZXJ8ZW58MXx8fHwxNzY5ODc0NDM4fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Обложка книги The Silent Patient автора Alex Michaelides"
+                  alt="The Silent Patient"
                   class="book-card__image"
                   itemprop="image"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
-                  "
                 />
-                <button
-                  class="book-card__favorite"
-                  aria-label="Add to favorites"
-                >
-                  <svg
-                    class="book-card__heart-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
-                    ></path>
+                <button class="book-card__favorite">
+                  <svg class="book-card__heart-icon">
+                    <use href="#icon-heart"></use>
                   </svg>
                 </button>
                 <div class="book-card__genre" itemprop="genre">Mystery</div>
@@ -919,146 +630,42 @@
                     itemtype="https://schema.org/AggregateRating"
                   >
                     <meta itemprop="ratingValue" content="4.7" />
-                    <meta itemprop="bestRating" content="5" />
-                    <meta itemprop="worstRating" content="1" />
                     <meta itemprop="ratingCount" content="890" />
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <span
-                      class="book-card__rating-value"
-                      role="img"
-                      aria-label="Рейтинг 4.7 из 5"
-                      >4.7</span
-                    >
+                    <span class="book-card__rating-value">4.7</span>
                   </div>
-                  <button class="book-card__read-btn">
-                    <svg
-                      class="icon-tiny"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    >
-                      <path
-                        d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-                      ></path>
-                    </svg>
-                    Read
-                  </button>
+                  <div
+                    itemprop="offers"
+                    itemscope
+                    itemtype="https://schema.org/Offer"
+                  >
+                    <meta itemprop="price" content="0" />
+                    <meta itemprop="priceCurrency" content="USD" />
+                    <button class="book-card__read-btn">
+                      <svg class="icon-tiny">
+                        <use href="#icon-library"></use>
+                      </svg>
+                      Read
+                    </button>
+                  </div>
                 </div>
               </div>
             </article>
-          </div>
 
-          <button class="books-view-all mobile-only">
-            View All
-            <svg
-              class="icon-small"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
-          </button>
-        </div>
-      </section>
-
-      <!-- New Arrivals -->
-      <section class="books-section">
-        <div class="books-content">
-          <div class="books-header">
-            <div class="books-header-left">
-              <h2 class="books-label">Latest Additions</h2>
-              <h3 class="books-title">New Arrivals</h3>
-            </div>
-            <button class="books-view-all desktop-only">
-              View All
-              <svg
-                class="icon-small"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              >
-                <path d="M5 12h14"></path>
-                <path d="m12 5 7 7-7 7"></path>
-              </svg>
-            </button>
-          </div>
-
-          <div class="books-grid">
             <!-- Book 5 -->
             <article
               class="book-card"
@@ -1069,31 +676,13 @@
               <div class="book-card__image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1711185898226-beea7eee0611?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyb21hbmNlJTIwbm92ZWwlMjBib29rJTIwY292ZXJ8ZW58MXx8fHwxNzY5ODgwNzIyfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Обложка книги Lessons in Chemistry автора Bonnie Garmus"
+                  alt="Lessons in Chemistry"
                   class="book-card__image"
                   itemprop="image"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
-                  "
                 />
-                <button
-                  class="book-card__favorite"
-                  aria-label="Add to favorites"
-                >
-                  <svg
-                    class="book-card__heart-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
-                    ></path>
+                <button class="book-card__favorite">
+                  <svg class="book-card__heart-icon">
+                    <use href="#icon-heart"></use>
                   </svg>
                 </button>
                 <div class="book-card__genre" itemprop="genre">Fiction</div>
@@ -1120,85 +709,23 @@
                     itemtype="https://schema.org/AggregateRating"
                   >
                     <meta itemprop="ratingValue" content="4.5" />
-                    <meta itemprop="bestRating" content="5" />
-                    <meta itemprop="worstRating" content="1" />
                     <meta itemprop="ratingCount" content="750" />
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <span
-                      class="book-card__rating-value"
-                      role="img"
-                      aria-label="Рейтинг 4.5 из 5"
-                      >4.5</span
-                    >
+                    <span class="book-card__rating-value">4.5</span>
                   </div>
                   <div
                     itemprop="offers"
@@ -1207,33 +734,15 @@
                   >
                     <meta itemprop="price" content="0" />
                     <meta itemprop="priceCurrency" content="USD" />
-                    <meta
-                      itemprop="availability"
-                      content="https://schema.org/InStock"
-                    />
-                    <button
-                      class="book-card__read-btn"
-                      aria-label="Читать книгу Lessons in Chemistry"
-                    >
-                      <svg
-                        class="icon-tiny"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-                        ></path>
+                    <button class="book-card__read-btn">
+                      <svg class="icon-tiny">
+                        <use href="#icon-library"></use>
                       </svg>
                       Read
                     </button>
                   </div>
                 </div>
               </div>
-              <!-- Closed book-card__info -->
             </article>
 
             <!-- Book 6 -->
@@ -1246,31 +755,13 @@
               <div class="book-card__image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1767968835997-5c5e9bc14b1c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxoaXN0b3JpY2FsJTIwZmljdGlvbiUyMGJvb2t8ZW58MXx8fHwxNzY5ODU3OTgwfDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Обложка книги All The Light We Cannot See автора Anthony Doerr"
+                  alt="All The Light We Cannot See"
                   class="book-card__image"
                   itemprop="image"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
-                  "
                 />
-                <button
-                  class="book-card__favorite"
-                  aria-label="Add to favorites"
-                >
-                  <svg
-                    class="book-card__heart-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
-                    ></path>
+                <button class="book-card__favorite">
+                  <svg class="book-card__heart-icon">
+                    <use href="#icon-heart"></use>
                   </svg>
                 </button>
                 <div class="book-card__genre" itemprop="genre">Historical</div>
@@ -1297,85 +788,23 @@
                     itemtype="https://schema.org/AggregateRating"
                   >
                     <meta itemprop="ratingValue" content="4.8" />
-                    <meta itemprop="bestRating" content="5" />
-                    <meta itemprop="worstRating" content="1" />
                     <meta itemprop="ratingCount" content="1650" />
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <span
-                      class="book-card__rating-value"
-                      role="img"
-                      aria-label="Рейтинг 4.8 из 5"
-                      >4.8</span
-                    >
+                    <span class="book-card__rating-value">4.8</span>
                   </div>
                   <div
                     itemprop="offers"
@@ -1384,33 +813,15 @@
                   >
                     <meta itemprop="price" content="0" />
                     <meta itemprop="priceCurrency" content="USD" />
-                    <meta
-                      itemprop="availability"
-                      content="https://schema.org/InStock"
-                    />
-                    <button
-                      class="book-card__read-btn"
-                      aria-label="Читать книгу All The Light We Cannot See"
-                    >
-                      <svg
-                        class="icon-tiny"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-                        ></path>
+                    <button class="book-card__read-btn">
+                      <svg class="icon-tiny">
+                        <use href="#icon-library"></use>
                       </svg>
                       Read
                     </button>
                   </div>
                 </div>
               </div>
-              <!-- Closed book-card__info -->
             </article>
 
             <!-- Book 7 -->
@@ -1423,34 +834,16 @@
               <div class="book-card__image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1765547683057-52188e9b4107?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx2aW50YWdlJTIwYm9vayUyMGNvdmVycyUyMGNvbGxlY3Rpb258ZW58MXx8fHwxNzY5ODgwNjY5fDA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Обложка книги Project Hail Mary автора Andy Weir"
+                  alt="Project Hail Mary"
                   class="book-card__image"
                   itemprop="image"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
-                  "
                 />
-                <button
-                  class="book-card__favorite"
-                  aria-label="Add to favorites"
-                >
-                  <svg
-                    class="book-card__heart-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
-                    ></path>
+                <button class="book-card__favorite">
+                  <svg class="book-card__heart-icon">
+                    <use href="#icon-heart"></use>
                   </svg>
                 </button>
-                <div class="book-card__genre">Sci-Fi</div>
+                <div class="book-card__genre" itemprop="genre">Sci-Fi</div>
               </div>
               <div class="book-card__info">
                 <div class="book-card__text">
@@ -1474,85 +867,23 @@
                     itemtype="https://schema.org/AggregateRating"
                   >
                     <meta itemprop="ratingValue" content="4.9" />
-                    <meta itemprop="bestRating" content="5" />
-                    <meta itemprop="worstRating" content="1" />
                     <meta itemprop="ratingCount" content="1850" />
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <span
-                      class="book-card__rating-value"
-                      role="img"
-                      aria-label="Рейтинг 4.9 из 5"
-                      >4.9</span
-                    >
+                    <span class="book-card__rating-value">4.9</span>
                   </div>
                   <div
                     itemprop="offers"
@@ -1561,33 +892,15 @@
                   >
                     <meta itemprop="price" content="0" />
                     <meta itemprop="priceCurrency" content="USD" />
-                    <meta
-                      itemprop="availability"
-                      content="https://schema.org/InStock"
-                    />
-                    <button
-                      class="book-card__read-btn"
-                      aria-label="Читать книгу Project Hail Mary"
-                    >
-                      <svg
-                        class="icon-tiny"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-                        ></path>
+                    <button class="book-card__read-btn">
+                      <svg class="icon-tiny">
+                        <use href="#icon-library"></use>
                       </svg>
                       Read
                     </button>
                   </div>
                 </div>
               </div>
-              <!-- Closed book-card__info -->
             </article>
 
             <!-- Book 8 -->
@@ -1600,31 +913,13 @@
               <div class="book-card__image-wrapper">
                 <img
                   src="https://images.unsplash.com/photo-1755188977089-3bb40306d57f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbGFzc2ljJTIwbGl0ZXJhdHVyZSUyMGJvb2slMjBzdGFja3xlbnwxfHx8fDE3Njk4ODA2Njl8MA&ixlib=rb-4.1.0&q=80&w=1080"
-                  alt="Обложка книги The Seven Husbands of Evelyn Hugo автора Taylor Jenkins Reid"
+                  alt="The Seven Husbands of Evelyn Hugo"
                   class="book-card__image"
                   itemprop="image"
-                  onerror="
-                    this.onerror = null;
-                    this.src =
-                      'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4KCg==';
-                  "
                 />
-                <button
-                  class="book-card__favorite"
-                  aria-label="Add to favorites"
-                >
-                  <svg
-                    class="book-card__heart-icon"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  >
-                    <path
-                      d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.29 1.51 4.04 3 5.5l7 7Z"
-                    ></path>
+                <button class="book-card__favorite">
+                  <svg class="book-card__heart-icon">
+                    <use href="#icon-heart"></use>
                   </svg>
                 </button>
                 <div class="book-card__genre" itemprop="genre">Fiction</div>
@@ -1651,85 +946,23 @@
                     itemtype="https://schema.org/AggregateRating"
                   >
                     <meta itemprop="ratingValue" content="4.6" />
-                    <meta itemprop="bestRating" content="5" />
-                    <meta itemprop="worstRating" content="1" />
                     <meta itemprop="ratingCount" content="1120" />
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star book-card__star--filled"
-                      viewBox="0 0 24 24"
-                      fill="currentColor"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star book-card__star--filled">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <svg
-                      class="book-card__star"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      aria-hidden="true"
-                    >
-                      <polygon
-                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
-                      ></polygon>
+                    <svg class="book-card__star">
+                      <use href="#icon-star"></use>
                     </svg>
-                    <span
-                      class="book-card__rating-value"
-                      role="img"
-                      aria-label="Рейтинг 4.6 из 5"
-                      >4.6</span
-                    >
+                    <span class="book-card__rating-value">4.6</span>
                   </div>
                   <div
                     itemprop="offers"
@@ -1738,50 +971,21 @@
                   >
                     <meta itemprop="price" content="0" />
                     <meta itemprop="priceCurrency" content="USD" />
-                    <meta
-                      itemprop="availability"
-                      content="https://schema.org/InStock"
-                    />
-                    <button
-                      class="book-card__read-btn"
-                      aria-label="Читать книгу The Seven Husbands of Evelyn Hugo"
-                    >
-                      <svg
-                        class="icon-tiny"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      >
-                        <path
-                          d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-                        ></path>
+                    <button class="book-card__read-btn">
+                      <svg class="icon-tiny">
+                        <use href="#icon-library"></use>
                       </svg>
                       Read
                     </button>
                   </div>
                 </div>
               </div>
-              <!-- Closed book-card__info -->
             </article>
           </div>
 
           <button class="books-view-all mobile-only">
             View All
-            <svg
-              class="icon-small"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            >
-              <path d="M5 12h14"></path>
-              <path d="m12 5 7 7-7 7"></path>
-            </svg>
+            <svg class="icon-small"><use href="#icon-arrow-right"></use></svg>
           </button>
         </div>
       </section>
@@ -1811,18 +1015,7 @@
       </div>
       <div class="footer-credits">
         <div class="footer-icon">
-          <svg
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"
-            ></path>
-          </svg>
+          <svg><use href="#icon-library"></use></svg>
         </div>
         <div class="footer-text">
           <div class="footer-text-row">

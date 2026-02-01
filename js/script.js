@@ -1,33 +1,23 @@
-// Функция для открытия/закрытия мобильного меню
-function toggleMobileMenu() {
-  const menu = document.getElementById('mobile-menu');
-  const icon = document.getElementById('menu-icon');
+// Глобальный обработчик ошибок загрузки изображений
+const FALLBACK_IMAGE =
+  'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iODgiIGhlaWdodD0iODgiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgc3Ryb2tlPSIjMDAwIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBvcGFjaXR5PSIuMyIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIzLjciPjxyZWN0IHg9IjE2IiB5PSIxNiIgd2lkdGg9IjU2IiBoZWlnaHQ9IjU2IiByeD0iNiIvPjxwYXRoIGQ9Im0xNiA1OCAxNi0xOCAzMiAzMiIvPjxjaXJjbGUgY3g9IjUzIiBjeT0iMzUiIHI9IjciLz48L3N2Zz4K';
 
-  if (menu.style.display === 'block') {
-    menu.style.display = 'none';
-    icon.innerHTML =
-      '<line x1="4" x2="20" y1="6" y2="6"></line><line x1="4" x2="20" y1="12" y2="12"></line><line x1="4" x2="20" y1="18" y2="18"></line>';
-  } else {
-    menu.style.display = 'block';
-    icon.innerHTML =
-      '<line x1="18" x2="6" y1="6" y2="18"></line><line x1="6" x2="18" y1="6" y2="18"></line>';
-  }
-}
-
-// Функция для плавной прокрутки наверх страницы
-function scrollToTop() {
-  window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-
-// Обработчик для поиска (при нажатии Enter в поле поиска)
 document.addEventListener('DOMContentLoaded', function () {
+  // Обработка битых картинок
+  const images = document.querySelectorAll('img');
+  images.forEach((img) => {
+    img.addEventListener('error', function () {
+      this.src = FALLBACK_IMAGE;
+    });
+  });
+
+  // Логика поиска
   const searchInput = document.querySelector('.search-input');
   const searchBtn = document.querySelector('.search-btn');
 
   if (searchInput) {
     searchInput.addEventListener('keydown', function (e) {
       if (e.key === 'Enter') {
-        // Здесь можно добавить логику поиска
         console.log('Поиск:', searchInput.value);
       }
     });
@@ -35,8 +25,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
   if (searchBtn) {
     searchBtn.addEventListener('click', function () {
-      // Здесь можно добавить логику поиска
       console.log('Поиск:', searchInput.value);
     });
   }
 });
+
+// Функция для переключения мобильного меню (через классы)
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.querySelector('.mobile-menu-btn');
+
+  // Переключаем видимость меню
+  if (menu.style.display === 'block') {
+    menu.style.display = 'none';
+    btn.classList.remove('is-open');
+  } else {
+    menu.style.display = 'block';
+    btn.classList.add('is-open');
+  }
+}
+
+// Функция для плавной прокрутки наверх страницы
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
