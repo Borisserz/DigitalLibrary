@@ -183,7 +183,6 @@
   cursor: pointer;
 }
 
-/* ФИКС СЕРДЦА В КАРТОЧКЕ */
 .book-card__heart-icon {
   width: 20px;
   height: 20px;
@@ -227,13 +226,12 @@
   padding-top: 12px;
 }
 
-/* ФИКС РЕЙТИНГА */
 .book-card__rating {
   display: flex;
   align-items: center;
   gap: 2px;
 }
-/* ФИКС ЗВЕЗД В КАРТОЧКЕ */
+
 .book-card__star {
   width: 16px;
   height: 16px;

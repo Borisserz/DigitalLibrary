@@ -17,6 +17,19 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 });
 
+function toggleMobileMenu() {
+  const menu = document.getElementById('mobile-menu');
+  const btn = document.querySelector('.mobile-menu-btn');
+
+  if (menu.style.display === 'block') {
+    menu.style.display = 'none';
+    btn.classList.remove('is-open');
+  } else {
+    menu.style.display = 'block';
+    btn.classList.add('is-open');
+  }
+}
+
 function scrollToTop() {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 }
