@@ -187,7 +187,18 @@
   width: 20px;
   height: 20px;
   stroke: var(--primary);
-  fill: none;
+  fill: transparent;
+  transition: fill 0.2s ease;
+}
+
+.book-card__favorite--active {
+  background-color: var(--primary) !important;
+  border-color: var(--primary);
+}
+
+.book-card__favorite--active .book-card__heart-icon {
+  stroke: #ffffff;
+  fill: #ffffff;
 }
 
 .book-card__genre {

@@ -255,8 +255,11 @@
                 type="text"
                 placeholder="Search by title, author, genre, or ISBN..."
                 class="search-input"
+                id="search-input"
+                autocomplete="off"
               />
               <button class="search-btn">Search</button>
+              <ul id="search-results" class="search-results"></ul>
             </div>
             <p class="search-subtitle">
               Explore over 50,000+ books in our digital collection
@@ -341,647 +344,7 @@
               <svg class="icon-small"><use href="#icon-arrow-right"></use></svg>
             </button>
           </div>
-
-          <div class="books-grid">
-            <!-- Book 1 -->
-            <article
-              class="book-card"
-              itemscope
-              itemtype="https://schema.org/Book"
-            >
-              <meta itemprop="isbn" content="9780743273565" />
-              <div class="book-card__image-wrapper">
-                <img
-                  src="images/book-great-gatsby.jpg"
-                  alt="The Great Gatsby"
-                  class="book-card__image"
-                  itemprop="image"
-                />
-                <button
-                  class="book-card__favorite"
-                  aria-label="Add to favorites"
-                >
-                  <svg class="book-card__heart-icon">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                </button>
-                <div class="book-card__genre" itemprop="genre">Classic</div>
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__text">
-                  <h3 class="book-card__name" itemprop="name">
-                    The Great Gatsby
-                  </h3>
-                  <p
-                    class="book-card__author"
-                    itemprop="author"
-                    itemscope
-                    itemtype="https://schema.org/Person"
-                  >
-                    <span itemprop="name">F. Scott Fitzgerald</span>
-                  </p>
-                </div>
-                <div class="book-card__footer">
-                  <div
-                    class="book-card__rating"
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                  >
-                    <meta itemprop="ratingValue" content="4.8" />
-                    <meta itemprop="ratingCount" content="1250" />
-                    <meta itemprop="bestRating" content="5" />
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <span class="book-card__rating-value">4.8</span>
-                  </div>
-                  <div
-                    itemprop="offers"
-                    itemscope
-                    itemtype="https://schema.org/Offer"
-                  >
-                    <meta itemprop="price" content="0" />
-                    <meta itemprop="priceCurrency" content="USD" />
-                    <meta
-                      itemprop="availability"
-                      content="https://schema.org/InStock"
-                    />
-                    <button class="book-card__read-btn">
-                      <svg class="icon-tiny">
-                        <use href="#icon-library"></use>
-                      </svg>
-                      Read
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 2 -->
-            <article
-              class="book-card"
-              itemscope
-              itemtype="https://schema.org/Book"
-            >
-              <meta itemprop="isbn" content="9780525559474" />
-              <div class="book-card__image-wrapper">
-                <img
-                  src="images/book-midnight-library.jpg"
-                  alt="The Midnight Library"
-                  class="book-card__image"
-                  itemprop="image"
-                />
-                <button class="book-card__favorite">
-                  <svg class="book-card__heart-icon">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                </button>
-                <div class="book-card__genre" itemprop="genre">Fantasy</div>
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__text">
-                  <h3 class="book-card__name" itemprop="name">
-                    The Midnight Library
-                  </h3>
-                  <p
-                    class="book-card__author"
-                    itemprop="author"
-                    itemscope
-                    itemtype="https://schema.org/Person"
-                  >
-                    <span itemprop="name">Matt Haig</span>
-                  </p>
-                </div>
-                <div class="book-card__footer">
-                  <div
-                    class="book-card__rating"
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                  >
-                    <meta itemprop="ratingValue" content="4.6" />
-                    <meta itemprop="ratingCount" content="980" />
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <span class="book-card__rating-value">4.6</span>
-                  </div>
-                  <div
-                    itemprop="offers"
-                    itemscope
-                    itemtype="https://schema.org/Offer"
-                  >
-                    <meta itemprop="price" content="0" />
-                    <meta itemprop="priceCurrency" content="USD" />
-                    <button class="book-card__read-btn">
-                      <svg class="icon-tiny">
-                        <use href="#icon-library"></use>
-                      </svg>
-                      Read
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 3 -->
-            <article
-              class="book-card"
-              itemscope
-              itemtype="https://schema.org/Book"
-            >
-              <meta itemprop="isbn" content="9780441013593" />
-              <div class="book-card__image-wrapper">
-                <img
-                  src="images/book-dune.jpg"
-                  alt="Dune"
-                  class="book-card__image"
-                  itemprop="image"
-                />
-                <button class="book-card__favorite">
-                  <svg class="book-card__heart-icon">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                </button>
-                <div class="book-card__genre" itemprop="genre">Sci-Fi</div>
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__text">
-                  <h3 class="book-card__name" itemprop="name">Dune</h3>
-                  <p
-                    class="book-card__author"
-                    itemprop="author"
-                    itemscope
-                    itemtype="https://schema.org/Person"
-                  >
-                    <span itemprop="name">Frank Herbert</span>
-                  </p>
-                </div>
-                <div class="book-card__footer">
-                  <div
-                    class="book-card__rating"
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                  >
-                    <meta itemprop="ratingValue" content="4.9" />
-                    <meta itemprop="ratingCount" content="2100" />
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <span class="book-card__rating-value">4.9</span>
-                  </div>
-                  <div
-                    itemprop="offers"
-                    itemscope
-                    itemtype="https://schema.org/Offer"
-                  >
-                    <meta itemprop="price" content="0" />
-                    <meta itemprop="priceCurrency" content="USD" />
-                    <button class="book-card__read-btn">
-                      <svg class="icon-tiny">
-                        <use href="#icon-library"></use>
-                      </svg>
-                      Read
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 4 -->
-            <article
-              class="book-card"
-              itemscope
-              itemtype="https://schema.org/Book"
-            >
-              <meta itemprop="isbn" content="9781250301697" />
-              <div class="book-card__image-wrapper">
-                <img
-                  src="images/book-silent-patient.jpg"
-                  alt="The Silent Patient"
-                  class="book-card__image"
-                  itemprop="image"
-                />
-                <button class="book-card__favorite">
-                  <svg class="book-card__heart-icon">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                </button>
-                <div class="book-card__genre" itemprop="genre">Mystery</div>
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__text">
-                  <h3 class="book-card__name" itemprop="name">
-                    The Silent Patient
-                  </h3>
-                  <p
-                    class="book-card__author"
-                    itemprop="author"
-                    itemscope
-                    itemtype="https://schema.org/Person"
-                  >
-                    <span itemprop="name">Alex Michaelides</span>
-                  </p>
-                </div>
-                <div class="book-card__footer">
-                  <div
-                    class="book-card__rating"
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                  >
-                    <meta itemprop="ratingValue" content="4.7" />
-                    <meta itemprop="ratingCount" content="890" />
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <span class="book-card__rating-value">4.7</span>
-                  </div>
-                  <div
-                    itemprop="offers"
-                    itemscope
-                    itemtype="https://schema.org/Offer"
-                  >
-                    <meta itemprop="price" content="0" />
-                    <meta itemprop="priceCurrency" content="USD" />
-                    <button class="book-card__read-btn">
-                      <svg class="icon-tiny">
-                        <use href="#icon-library"></use>
-                      </svg>
-                      Read
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 5 -->
-            <article
-              class="book-card"
-              itemscope
-              itemtype="https://schema.org/Book"
-            >
-              <meta itemprop="isbn" content="9780385547345" />
-              <div class="book-card__image-wrapper">
-                <img
-                  src="images/book-lessons-in-chemistry.jpg"
-                  alt="Lessons in Chemistry"
-                  class="book-card__image"
-                  itemprop="image"
-                />
-                <button class="book-card__favorite">
-                  <svg class="book-card__heart-icon">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                </button>
-                <div class="book-card__genre" itemprop="genre">Fiction</div>
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__text">
-                  <h3 class="book-card__name" itemprop="name">
-                    Lessons in Chemistry
-                  </h3>
-                  <p
-                    class="book-card__author"
-                    itemprop="author"
-                    itemscope
-                    itemtype="https://schema.org/Person"
-                  >
-                    <span itemprop="name">Bonnie Garmus</span>
-                  </p>
-                </div>
-                <div class="book-card__footer">
-                  <div
-                    class="book-card__rating"
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                  >
-                    <meta itemprop="ratingValue" content="4.5" />
-                    <meta itemprop="ratingCount" content="750" />
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <span class="book-card__rating-value">4.5</span>
-                  </div>
-                  <div
-                    itemprop="offers"
-                    itemscope
-                    itemtype="https://schema.org/Offer"
-                  >
-                    <meta itemprop="price" content="0" />
-                    <meta itemprop="priceCurrency" content="USD" />
-                    <button class="book-card__read-btn">
-                      <svg class="icon-tiny">
-                        <use href="#icon-library"></use>
-                      </svg>
-                      Read
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 6 -->
-            <article
-              class="book-card"
-              itemscope
-              itemtype="https://schema.org/Book"
-            >
-              <meta itemprop="isbn" content="9781501161933" />
-              <div class="book-card__image-wrapper">
-                <img
-                  src="images/book-all-the-light.jpg"
-                  alt="All The Light We Cannot See"
-                  class="book-card__image"
-                  itemprop="image"
-                />
-                <button class="book-card__favorite">
-                  <svg class="book-card__heart-icon">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                </button>
-                <div class="book-card__genre" itemprop="genre">Historical</div>
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__text">
-                  <h3 class="book-card__name" itemprop="name">
-                    All The Light We Cannot See
-                  </h3>
-                  <p
-                    class="book-card__author"
-                    itemprop="author"
-                    itemscope
-                    itemtype="https://schema.org/Person"
-                  >
-                    <span itemprop="name">Anthony Doerr</span>
-                  </p>
-                </div>
-                <div class="book-card__footer">
-                  <div
-                    class="book-card__rating"
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                  >
-                    <meta itemprop="ratingValue" content="4.8" />
-                    <meta itemprop="ratingCount" content="1650" />
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <span class="book-card__rating-value">4.8</span>
-                  </div>
-                  <div
-                    itemprop="offers"
-                    itemscope
-                    itemtype="https://schema.org/Offer"
-                  >
-                    <meta itemprop="price" content="0" />
-                    <meta itemprop="priceCurrency" content="USD" />
-                    <button class="book-card__read-btn">
-                      <svg class="icon-tiny">
-                        <use href="#icon-library"></use>
-                      </svg>
-                      Read
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 7 -->
-            <article
-              class="book-card"
-              itemscope
-              itemtype="https://schema.org/Book"
-            >
-              <meta itemprop="isbn" content="9780593135204" />
-              <div class="book-card__image-wrapper">
-                <img
-                  src="images/book-project-hail-mary.jpg"
-                  alt="Project Hail Mary"
-                  class="book-card__image"
-                  itemprop="image"
-                />
-                <button class="book-card__favorite">
-                  <svg class="book-card__heart-icon">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                </button>
-                <div class="book-card__genre" itemprop="genre">Sci-Fi</div>
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__text">
-                  <h3 class="book-card__name" itemprop="name">
-                    Project Hail Mary
-                  </h3>
-                  <p
-                    class="book-card__author"
-                    itemprop="author"
-                    itemscope
-                    itemtype="https://schema.org/Person"
-                  >
-                    <span itemprop="name">Andy Weir</span>
-                  </p>
-                </div>
-                <div class="book-card__footer">
-                  <div
-                    class="book-card__rating"
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                  >
-                    <meta itemprop="ratingValue" content="4.9" />
-                    <meta itemprop="ratingCount" content="1850" />
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <span class="book-card__rating-value">4.9</span>
-                  </div>
-                  <div
-                    itemprop="offers"
-                    itemscope
-                    itemtype="https://schema.org/Offer"
-                  >
-                    <meta itemprop="price" content="0" />
-                    <meta itemprop="priceCurrency" content="USD" />
-                    <button class="book-card__read-btn">
-                      <svg class="icon-tiny">
-                        <use href="#icon-library"></use>
-                      </svg>
-                      Read
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-
-            <!-- Book 8 -->
-            <article
-              class="book-card"
-              itemscope
-              itemtype="https://schema.org/Book"
-            >
-              <meta itemprop="isbn" content="9781501139239" />
-              <div class="book-card__image-wrapper">
-                <img
-                  src="images/book-evelyn-hugo.jpg"
-                  alt="The Seven Husbands of Evelyn Hugo"
-                  class="book-card__image"
-                  itemprop="image"
-                />
-                <button class="book-card__favorite">
-                  <svg class="book-card__heart-icon">
-                    <use href="#icon-heart"></use>
-                  </svg>
-                </button>
-                <div class="book-card__genre" itemprop="genre">Fiction</div>
-              </div>
-              <div class="book-card__info">
-                <div class="book-card__text">
-                  <h3 class="book-card__name" itemprop="name">
-                    The Seven Husbands of Evelyn Hugo
-                  </h3>
-                  <p
-                    class="book-card__author"
-                    itemprop="author"
-                    itemscope
-                    itemtype="https://schema.org/Person"
-                  >
-                    <span itemprop="name">Taylor Jenkins Reid</span>
-                  </p>
-                </div>
-                <div class="book-card__footer">
-                  <div
-                    class="book-card__rating"
-                    itemprop="aggregateRating"
-                    itemscope
-                    itemtype="https://schema.org/AggregateRating"
-                  >
-                    <meta itemprop="ratingValue" content="4.6" />
-                    <meta itemprop="ratingCount" content="1120" />
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star book-card__star--filled">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <svg class="book-card__star">
-                      <use href="#icon-star"></use>
-                    </svg>
-                    <span class="book-card__rating-value">4.6</span>
-                  </div>
-                  <div
-                    itemprop="offers"
-                    itemscope
-                    itemtype="https://schema.org/Offer"
-                  >
-                    <meta itemprop="price" content="0" />
-                    <meta itemprop="priceCurrency" content="USD" />
-                    <button class="book-card__read-btn">
-                      <svg class="icon-tiny">
-                        <use href="#icon-library"></use>
-                      </svg>
-                      Read
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </article>
-          </div>
-
+          <div class="books-grid"></div>
           <button class="books-view-all mobile-only">
             View All
             <svg class="icon-small"><use href="#icon-arrow-right"></use></svg>
@@ -1026,6 +389,57 @@
       </div>
     </footer>
 
+    <div id="book-modal" class="modal">
+      <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">
+          <svg class="icon"><use href="#icon-close"></use></svg>
+        </button>
+
+        <div class="modal-body">
+          <div class="modal-image-wrapper">
+            <img id="modal-img" src="" alt="" class="modal-img" />
+          </div>
+
+          <div class="modal-info">
+            <h2 id="modal-title" class="modal-title">Title</h2>
+            <p id="modal-author" class="modal-author">Author</p>
+            <div id="modal-rating-display" class="book-card__rating"></div>
+            <p id="modal-description" class="modal-desc">Описание книги...</p>
+
+            <div class="reviews-section">
+              <h3>Reviews</h3>
+              <ul id="reviews-list" class="reviews-list"></ul>
+
+              <form id="review-form" class="review-form">
+                <h4>Write a review</h4>
+                <div class="rating-input">
+                  <span>Rate:</span>
+                  <select id="review-rating">
+                    <option value="5">5 Stars</option>
+                    <option value="4">4 Stars</option>
+                    <option value="3">3 Stars</option>
+                    <option value="2">2 Stars</option>
+                    <option value="1">1 Star</option>
+                  </select>
+                </div>
+                <textarea
+                  id="review-text"
+                  placeholder="Your review..."
+                  required
+                ></textarea>
+                <button
+                  type="submit"
+                  class="cta-button"
+                  style="padding: 8px 16px; margin-top: 8px; font-size: 14px"
+                >
+                  Submit Review
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/script.js"></script>
   </body>
 </html>
