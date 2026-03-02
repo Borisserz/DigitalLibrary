@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="DigitalLibrary" />
     <title>Liber - Digital Library</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,6 +14,7 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <a href="#main" class="skip-link">Skip to main content</a>
     <svg style="display: none">
       <defs>
         <symbol
@@ -988,23 +990,26 @@
 
     <!-- Footer -->
     <footer class="footer" itemscope itemtype="https://schema.org/WPFooter">
-      <div class="footer-links">
-        <button class="footer-link">Home</button>
-        <button class="footer-link">Browse</button>
-        <button class="footer-link">About Us</button>
-        <button class="footer-link">FAQ</button>
-        <button class="footer-link">Contact</button>
-      </div>
-      <div class="footer-credits">
-        <div class="footer-icon">
-          <svg><use href="#icon-library"></use></svg>
-        </div>
-        <div class="footer-text">
-          <div class="footer-text-row">
-            <p>© Liber.</p>
-            <p>2026</p>
+      <div class="footer__container">
+        <nav class="footer__nav" aria-label="Footer Navigation">
+          <a href="#home" class="footer__link">Home</a>
+          <a href="#browse" class="footer__link">Browse</a>
+          <a href="#about" class="footer__link">About Us</a>
+          <a href="#faq" class="footer__link">FAQ</a>
+          <a href="#contact" class="footer__link">Contact</a>
+        </nav>
+
+        <div class="footer__credits">
+          <div class="footer__icon">
+            <svg><use href="#icon-library"></use></svg>
           </div>
-          <p>All Rights Reserved</p>
+          <div class="footer__text">
+            <div class="footer__text-row">
+              <p>© Liber.</p>
+              <p>2026</p>
+            </div>
+            <p>All Rights Reserved</p>
+          </div>
         </div>
       </div>
     </footer>
