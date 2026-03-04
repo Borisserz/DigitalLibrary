@@ -127,8 +127,6 @@ document.addEventListener('DOMContentLoaded', () => {
       article.innerHTML = `
         <div class="book-card__image-wrapper">
           <img src="${book.image}" alt="${book.title}" class="book-card__image" />
-          
-          <!-- ПРИМЕНЯЕМ КЛАСС СЮДА -->
           <button class="${btnClass}" data-isbn="${book.isbn}">
             <svg class="book-card__heart-icon">
               <use href="#icon-heart"></use>
@@ -138,7 +136,6 @@ document.addEventListener('DOMContentLoaded', () => {
           <div class="book-card__genre">${book.genre}</div>
         </div>
         <div class="book-card__info">
-          <!-- остальной код без изменений -->
           <div class="book-card__text">
             <h3 class="book-card__name">${book.title}</h3>
             <p class="book-card__author">${book.author}</p>
