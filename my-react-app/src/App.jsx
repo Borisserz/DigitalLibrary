@@ -9,7 +9,6 @@ import { books, genres } from './data/mockData';
 function App() {
   const filterText = '';
 
-  // Простая фильтрация
   const filteredBooks = books.filter(
     (book) =>
       book.title.toLowerCase().includes(filterText.toLowerCase()) ||
@@ -18,14 +17,11 @@ function App() {
 
   return (
     <div className="app">
-      {/* Навигация точь-в-точь как в оригинале */}
       <nav className="nav">
         <div className="nav-container">
           <button className="logo" onClick={() => window.scrollTo(0, 0)}>
             <span>Liber</span>
           </button>
-
-          {/* Десктопное меню */}
           <div className="nav-desktop">
             <a href="#home" className="nav-link nav-link--active">
               Home
@@ -65,11 +61,9 @@ function App() {
         </div>
       </nav>
 
-      {/* Hero блок с поиском */}
       <Header />
 
       <main className="main">
-        {/* Секция с книгами */}
         <section className="books-section">
           <div className="books-content">
             <div className="books-header">
@@ -85,10 +79,7 @@ function App() {
               </button>
             </div>
 
-            {/* Фильтры */}
             <GenreFilter genres={genres} />
-
-            {/* Сетка книг */}
             <BookList books={filteredBooks} />
 
             <button className="books-view-all mobile-only">
@@ -100,11 +91,8 @@ function App() {
           </div>
         </section>
 
-        {/* Секция призыва к действию */}
         <CtaSection />
       </main>
-
-      {/* Подвал */}
       <Footer />
     </div>
   );
