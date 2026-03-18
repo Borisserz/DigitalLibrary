@@ -9,7 +9,7 @@ export const books = [
     genre: 'Fiction',
     rating: 4.8,
     status: 'Available',
-    // Рабочая ссылка на 1984
+
     image:
       'https://m.media-amazon.com/images/I/71kxa1-0mfL._AC_UF1000,1000_QL80_.jpg',
     description:
@@ -23,7 +23,6 @@ export const books = [
     genre: 'Classic',
     rating: 4.9,
     status: 'Taken',
-    // Новая ссылка
     image:
       'https://m.media-amazon.com/images/I/81gepf1eMqL._AC_UF1000,1000_QL80_.jpg',
     description:
@@ -37,7 +36,6 @@ export const books = [
     genre: 'Fiction',
     rating: 4.2,
     status: 'Available',
-    // Новая ссылка
     image:
       'https://m.media-amazon.com/images/I/71FTb9X6wsL._AC_UF1000,1000_QL80_.jpg',
     description:
@@ -51,7 +49,6 @@ export const books = [
     genre: 'Science',
     rating: 4.6,
     status: 'Available',
-    // Новая ссылка
     image:
       'https://m.media-amazon.com/images/I/81X4R7QhFkL._AC_UF1000,1000_QL80_.jpg',
     description:

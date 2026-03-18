@@ -17,7 +17,7 @@ const GenreFilter = ({ genres }) => {
             borderRadius: '20px',
             padding: '8px 16px',
             cursor: 'pointer',
-            backgroundColor: index === 0 ? '#dfecc6' : 'white', // Подсветим первый как активный
+            backgroundColor: index === 0 ? '#dfecc6' : 'white',
           }}
           onClick={() => console.log(`Filter clicked: ${genre}`)}
         >
